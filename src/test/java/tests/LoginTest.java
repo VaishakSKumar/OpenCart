@@ -25,9 +25,13 @@ public class LoginTest extends BaseTest{
 		MyAccountPage account=new MyAccountPage(driver);
 		boolean expected=account.isMessageDisplayed() ;
 			Assert.assertEquals(expected, true,"Login Failed");
+			
+			account.click_logout();
 		
 	}catch(Exception e) {
 		Assert.fail();
 	}
+		
+		
 	}
 }

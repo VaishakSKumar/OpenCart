@@ -16,6 +16,9 @@ public class MyAccountPage extends BasePage {
 	@FindBy(xpath="//h2[text()='My Account']")
 	WebElement myAccountmessage;
 	
+	@FindBy(xpath="//div[@class='list-group']//child::a[contains(text(),'Logout')]")
+	WebElement logout;
+	
 	public boolean isMessageDisplayed() {
 		try {
 		return myAccountmessage.isDisplayed();
@@ -23,5 +26,9 @@ public class MyAccountPage extends BasePage {
 			return false;
 		}
 		
+	}
+	
+	public void click_logout() {
+		logout.click();
 	}
 }

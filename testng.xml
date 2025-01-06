@@ -5,7 +5,8 @@
   <parameter name="browser" value="Chrome" />
     <classes>
      <!--  <class name="tests.RegistrationTest"/>-->
-       <class name="tests.LoginTest"/>
+      <!-- <class name="tests.LoginTest"/>-->
+      <class name="tests.LoginDDT"/>>
     </classes>
   </test> <!-- Test -->  
 </suite> <!-- Suite -->
