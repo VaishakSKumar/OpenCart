@@ -3,14 +3,22 @@
 <suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="tests" name="Chrome Test(failed)">
     <parameter name="browser" value="Chrome"/>
+    <groups>
+      <run>
+        <include name="Master"/>
+      </run>
+    </groups>
     <classes>
-      <class name="tests.LoginDDT">
+      <class name="tests.LoginTest">
         <methods>
-          <include name="setUp"/>
-          <include name="test" invocation-numbers="1"/>
-          <include name="tearDown"/>
+          <include name="Test"/>
         </methods>
-      </class> <!-- tests.LoginDDT -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.RegistrationTest">
+        <methods>
+          <include name="Test"/>
+        </methods>
+      </class> <!-- tests.RegistrationTest -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -19,7 +19,7 @@ public class BaseTest {
 	
 	public WebDriver driver;
 	public Properties p;
-	 @BeforeClass
+	 @BeforeClass(groups = {"Sanity","Regression","Master"})
 	 @Parameters({"browser"})
 	 public void setUp(String browser) throws Exception  {
 		 
@@ -80,7 +80,7 @@ public class BaseTest {
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
-	 @AfterClass
+	 @AfterClass(groups = {"Sanity","Regression","Master"})
 	 public void tearDown() {
 		 driver.quit();
 	 }

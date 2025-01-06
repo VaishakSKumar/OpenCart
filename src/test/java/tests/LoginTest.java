@@ -10,7 +10,7 @@ import testpages.MyAccountPage;
 
 public class LoginTest extends BaseTest{
 	
-	@Test
+	@Test(groups = {"Sanity","Master"})
 	public void Test() {
 		try {
 		HomePage hp=new HomePage(driver);

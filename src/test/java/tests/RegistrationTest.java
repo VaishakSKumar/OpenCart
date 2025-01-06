@@ -15,7 +15,7 @@ public class RegistrationTest extends BaseTest {
 
  
  
- @Test
+ @Test(groups = {"Regression","Master"})
  public void Test() {
 	 
 	 hp=new HomePage(driver);
